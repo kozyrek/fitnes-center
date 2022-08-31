@@ -1,0 +1,33 @@
+// класс для реализации работы меню и карты без использования js
+.no-js {
+  .no-js__page-header-button {
+    display: none;
+  }
+
+  .no-js__description {
+    display: block;
+  }
+
+  .no-js__description-button {
+    display: none;
+  }
+
+  @include vp-767 {
+    .no-js__text-visible {
+      display: inline;
+    }
+
+    .no-js__accordion-button {
+      cursor: default;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .no-js__accordion-list {
+      display: block;
+    }
+  }
+}
