@@ -1,0 +1,297 @@
+.tabs {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tabs__image {
+  position: absolute;
+  bottom: -249px;
+  right: -168px;
+
+  @include vp-1199 {
+    width: 396px;
+    bottom: -205px;
+    right: -50px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.tabs__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.tabs__pane {
+  margin-bottom: 20px;
+  display: none;
+}
+
+.tabs__pane--show {
+  display: block;
+}
+
+.tabs h2 {
+  font-family: "Bebas Neue", "Tahoma", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 25px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin: 0 0 21px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 11px;
+  }
+}
+
+.tabs__navigation {
+  position: relative;
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 46px;
+
+  @include vp-1199 {
+    margin-bottom: 29px;
+    gap: 54px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 17px;
+    gap: 45px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+
+    @include vp-767 {
+      bottom: 19px;
+    }
+  }
+}
+
+.tabs__button {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding: 13px 0;
+  border: none;
+  color: rgba(16, 38, 84, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 19px;
+  }
+}
+
+.tabs__button--active {
+  color: $color-sapphire;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #d10a42;
+  }
+}
+
+.tabs__content {
+  align-self: stretch;
+  z-index: 1;
+
+  @include vp-1199 {
+    padding: 0 118px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.tabs__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 36px;
+  }
+}
+
+.tabs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 55px 10px 61px;
+  text-align: center;
+  background: $color-default-white;
+  border: 7px solid $color-default-white;
+
+  @include vp-767 {
+    padding: 43px 10px 46px;
+  }
+
+  &:hover {
+    border: 7px solid #d10a42;
+    border-image: linear-gradient(to right bottom, #d10a42, #00359f);
+    border-image-slice: 1;
+
+    a {
+      background: linear-gradient(97.05deg, $color-torch-red 17.6%, #003EB7 95.31%);
+      color: $color-default-white;
+      padding: 26px;
+      border: none;
+    }
+  }
+}
+
+.tabs h3 {
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 700;
+  margin: 0 0 11px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.tabs p {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 35px;
+  position: relative;
+  z-index: 1;
+
+  @include vp-767 {
+    margin: 0 0 30px;
+  }
+}
+
+.tabs span {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  display: block;
+  color: $color-egyptian-blue;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+    margin-left: 3px;
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-parent);
+    top: -65px;
+    left: 0;
+    right: 0;
+    color: transparent;
+    font-size: 100px;
+    line-height: 150px;
+    text-shadow: 0 10px 0 $color-whisper;
+    opacity: 0.48;
+    z-index: -1;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+      top: -53px;
+    }
+  }
+}
+
+.tabs span + span {
+  font-family: "Rouble", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 700;
+  color: $color-sapphire;
+  margin-left: 10px;
+
+  @include vp-767 {
+    font-size: 45px;
+    line-height: 60px;
+    margin-left: 6px;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.tabs__item > span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #495a7d;
+  display: block;
+  margin-bottom: 63px;
+  padding: 0;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 53px 0;
+  }
+
+
+  &::before {
+    display: none;
+  }
+}
+
+.tabs a {
+  color: $color-sapphire;///
+  display: block;
+  width: 100%;
+  max-width: 206px;
+  margin-top: auto;
+  padding: 24px;
+  border: 2px solid $color-sapphire;
+}

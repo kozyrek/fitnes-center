@@ -1,0 +1,142 @@
+.video {
+  margin-top: -113px;
+  margin-left: -63px;
+  position: relative;
+  width: 55.15%;
+  height: auto;
+
+  @include vp-1199 {
+    margin: -84px auto 0 auto;
+    width: calc(266/678*100%);
+    max-width: 353px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+    max-width: 532px;///////////////////////
+    margin: 0 auto;/////////////////////////////
+  }
+}
+
+.video__link {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 54, 122, 0.5);
+    z-index: 1;
+  }
+}
+
+.video__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.video__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 2;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+
+  @include vp-1199 {
+    width: 52px;
+    height: 52px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../img/background/ellipse-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include vp-1199 {
+      width: 73px;
+      height: 73px;
+      background-image: url("../img/background/ellipse.svg");
+    }
+  }
+}
+
+.video__button-icon {
+  padding-left: 4px;
+
+  @include vp-1199 {
+    display: block;
+    margin: auto;
+    padding: 0 0 1px 1px;
+    width: 12px;
+    height: 12px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 1px 3px;
+  }
+}
+
+// .video__button-shape {
+//   fill: #212121;
+//   fill-opacity: 0.8;
+// }
+
+// .video__button-icon {
+//   fill: #ffffff;
+// }
+
+// .video__button:focus {
+//   outline: none;
+// }
+
+// .video:hover .video__button-shape,
+// .video__button:focus .video__button-shape {
+//   fill: #ff0000;
+//   fill-opacity: 1;
+// }
+
+/* Enabled */
+
+.video--enabled {
+  cursor: pointer;
+
+}
+
+.video--enabled .video__button {
+  display: block;
+}
