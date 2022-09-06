@@ -2,6 +2,7 @@
 
 import {findVideos} from './modules/play-video';
 import {openTab} from './modules/open-tab';
+import {initSlider} from './modules/init-slider';
 
 // ---------------------------------
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // iosVhFix();
   findVideos();
+  initSlider();
 
   // Modules
   // ---------------------------------
