@@ -1,0 +1,222 @@
+.communication {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(to right, $color-sapphire 50%, $color-default-white 50%);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background-color: #74819c;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  @include vp-1199 {
+    background: none;
+  }
+}
+
+.communication__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.communication__free-training {
+  color: $color-default-white;
+  background-color: $color-sapphire;
+  padding: 58px 70px 45px 0;
+
+  @include vp-1199 {
+    padding: 66px 0 70px;
+  }
+}
+
+.communication__centerer {
+  @include vp-1199 {
+    padding-left: 133px;
+    padding-right: 90px;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 425px;
+  }
+}
+
+.communication__contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 115px;
+  margin-left: 120px;
+  padding: 65px 0 45px 0;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 66px 0 41px;
+    margin: 0;
+    column-gap: 82px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 66px 0 43px;
+  }
+}
+
+.communication h2 {
+  font-family: "Bebas Neue", "Tahoma", sans-serif;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 36px;
+  max-width: 410px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 38px;
+  }
+}
+
+.communication__contacts h2 {
+  line-height: 49px;
+  width: 100%;
+  margin: 0 0 45px;
+  grid-column: -1 / 1;
+
+  @include vp-1199 {
+    margin: 0 0 36px;
+  }
+}
+
+.communication__contacts dl {
+  margin: 0 0 0 3px;
+  position: relative;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 135%;
+    bottom: 26px;
+    width: 1px;
+    background-color: #74819c;
+
+    @include vp-1199 {
+      top: 8px;
+      left: 115%;
+      bottom: 27px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.communication__contacts dt {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 2px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 6px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 5px;
+  }
+}
+
+.communication__contacts dd {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0 0 20px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.communication__free-training form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 29px;
+  max-width: 410px;
+
+  @include vp-1199 {
+    column-gap: 60px;
+    margin-right: 73px;
+    max-width: none;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+  }
+}
+
+.communication__free-training input {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px 0;
+  color: #c1ccd2;
+  background-color: $color-sapphire;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #74819c;
+
+  @include vp-767 {
+    margin-bottom: 3px;
+    padding: 5px 0 6px;
+  }
+}
+
+.communication__free-training input::placeholder {
+  color: $color-default-white;
+}
+
+.communication__free-training button {
+  grid-column: -1 / 1;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: auto;
+  padding: 16px;
+  background-color: transparent;
+  border: 3px solid $color-default-white;
+}

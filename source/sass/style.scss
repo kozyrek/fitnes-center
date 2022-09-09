@@ -1,7 +1,7 @@
 // Vendor
 // ---------------------------------
 
-// Swiper 8.3.2
+// Swiper 7.4.1
 @import "vendor/swiper.scss";
 
 // Global
@@ -27,6 +27,10 @@
 @import "blocks/tabs.scss";
 @import "blocks/games.scss";
 @import "blocks/trainers.scss";
+@import "blocks/advantage.scss";
+@import "blocks/promo.scss";
+@import "blocks/reviews.scss";
+@import "blocks/communication.scss";
 @import "blocks/page-main.scss";
 @import "blocks/page-footer.scss";
 

@@ -1,0 +1,221 @@
+.advantage {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  padding-top: 114px;
+  padding-bottom: 65px;
+  color: $color-sapphire;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 94px;
+    padding-bottom: 56px;
+  }
+
+  @include vp-767 {
+    padding: 66px 0 43px;
+  }
+}
+
+.advantage h2 {
+  font-family: "Bebas Neue", "Tahoma", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 74px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin: 0 0 9px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 32px;
+  }
+}
+
+.advantage ul {
+  padding: 0 72px 0 80px;///////////////////////////////////////////
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 107px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 5px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
+.advantage__item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 30px;
+  position: relative;
+
+  @include vp-1199 {
+    padding-top: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 46px 8px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -82px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(209, 10, 66, 0.2);
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.advantage__item--trainer {
+  display: block;
+  max-width: 240px;
+  margin: 0 auto 55px;
+  padding: 37px 34px 43px 26px;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  @include vp-1199 {
+    grid-column: -1 / 1;
+    grid-row: 2 / 3;
+    max-width: 100%;
+    margin: 0 118px;
+    padding: 14px 130px 20px;
+  }
+
+  @include vp-767 {
+    grid-row: 3 / 4;
+    margin: 0 0 25px;
+    padding: 30px 55px 28px;
+  }
+}
+
+.advantage h3 {
+  font-size: 22px;
+  line-height: 33px;
+  margin: -7px 0 5px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: -7px 0 0;
+  }
+
+  @include vp-767 {
+    margin: -12px 0 0;
+  }
+}
+
+.advantage p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 0 0 15px;
+}
+
+.advantage span {
+  display: block;
+  font-size: 71px;
+  line-height: 107px;
+  position: relative;
+  top: -26px;
+  color: #d10a42;
+  background-image: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;//////////////////////////////////////
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 87px;
+    top: -21px;
+  }
+
+  @include vp-767 {
+    top: 0;
+  }
+}
+
+.advantage span + span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #2e35ac;
+  background-image: linear-gradient(to top, #2e35ac);
+  position: relative;
+  top: -50px;
+
+  @include vp-1199 {
+    top: -40px;
+  }
+
+  @include vp-767 {
+    top: -19px;
+  }
+}
+
+.advantage__item--trainer h3 {
+  font-size: 26px;
+  line-height: 39px;
+  margin: 0 0 30px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 9px;
+  }
+}
+
+.advantage__item--trainer p {
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.advantage__item--trainer span {
+  margin: 0 0 -13px;
+  position: static;
+  color: $color-default-white;
+  background-image: linear-gradient(to top, $color-default-white);
+
+  @include vp-1199 {
+    font-size: 74px;
+    line-height: 111px;
+    margin: 0 0 -18px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 -23px;
+  }
+}
