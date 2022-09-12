@@ -40,7 +40,7 @@
 }
 
 .advantage ul {
-  padding: 0 72px 0 80px;///////////////////////////////////////////
+  padding: 0 72px 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
@@ -148,10 +148,9 @@
   line-height: 107px;
   position: relative;
   top: -26px;
-  color: #d10a42;
+  color: transparent;
   background-image: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
   background-clip: text;
-  -webkit-text-fill-color: transparent;//////////////////////////////////////
 
   @include vp-1199 {
     font-size: 58px;
@@ -169,7 +168,6 @@
   line-height: 21px;
   font-weight: 400;
   color: #2e35ac;
-  background-image: linear-gradient(to top, #2e35ac);
   position: relative;
   top: -50px;
 
@@ -207,7 +205,6 @@
   margin: 0 0 -13px;
   position: static;
   color: $color-default-white;
-  background-image: linear-gradient(to top, $color-default-white);
 
   @include vp-1199 {
     font-size: 74px;

@@ -4,6 +4,7 @@ let tabName;
 
 const selectTabButton = (evt) => {
   tabButtons.forEach((element) => {
+    element.removeAttribute('href');
     element.classList.remove('tabs__button--active');
   });
 
@@ -14,19 +15,30 @@ const selectTabButton = (evt) => {
 };
 
 const selectTabContent = (item) => {
-  tabs.forEach((element) => {
-    if (element.classList.contains(item)) {
-      element.classList.add('tabs__pane--show');
-    } else {
-      element.classList.remove('tabs__pane--show');
-    }
-  });
+  if (tabs) {
+    tabs.forEach((element) => {
+      if (element.classList.contains(item)) {
+        element.classList.add('tabs__pane--show');
+      } else {
+        element.classList.remove('tabs__pane--show');
+      }
+    });
+  }
 };
 
 const openTab = function () {
-  tabButtons.forEach((element) => {
-    element.addEventListener('click', selectTabButton);
-  });
+  if (tabButtons) {
+    tabButtons.forEach((element) => {
+      element.addEventListener('click', selectTabButton);
+
+      element.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 13) {
+          evt.preventDefault();
+          selectTabButton(evt);
+        }
+      });
+    });
+  }
 };
 
 export {openTab};

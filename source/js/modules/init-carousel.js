@@ -9,7 +9,7 @@ const carousel = new window.Swiper(sliderReviews, {
     nextEl: buttonNext,
     prevEl: buttonPrev,
   },
-  watchOverflow: true, // ///////////////////////////////////////////////
+  watchOverflow: true,
 });
 
 const initCarousel = () => {

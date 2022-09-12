@@ -126,7 +126,8 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  display: inline-block;/////////////////
+  display: inline-block;
+  vertical-align: middle;
   margin: 0 0 3px;
   position: relative;
 
@@ -156,12 +157,14 @@
   font-size: 14px;
   line-height: 21px;
   display: inline-block;
+  vertical-align: middle;
   margin-left: 7px;
   width: min-content;
 
   @include vp-1199 {
     font-size: 10px;
     line-height: 15px;
+    vertical-align: top;
     margin-left: 3px;
     position: relative;
     top: 4px;

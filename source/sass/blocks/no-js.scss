@@ -1,33 +1,148 @@
 // класс для реализации работы меню и карты без использования js
 .no-js {
-  .no-js__page-header-button {
+  .no-js__video-button {
     display: none;
   }
 
-  .no-js__description {
-    display: block;
-  }
-
-  .no-js__description-button {
-    display: none;
-  }
-
-  @include vp-767 {
-    .no-js__text-visible {
-      display: inline;
-    }
-
-    .no-js__accordion-button {
-      cursor: default;
-
-      &::before,
+  .no-js__video-link {
+    &:hover,
+    &:focus {
       &::after {
-        display: none;
+        opacity: 0.7;
       }
     }
 
-    .no-js__accordion-list {
-      display: block;
+    &:active {
+      &::after {
+        opacity: 0.5;
+      }
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+
+      @include vp-1199 {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  .no-js__tabs {
+    overflow-y: auto;
+    max-height: 467px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include vp-1199 {
+      max-height: 1443px;
+    }
+
+    @include vp-767 {
+      max-height: 1241px;
+    }
+  }
+
+  .no-js__tab {
+    display: block;
+    width: 100%;
+  }
+
+  .no-js__tabs-button {
+    color: rgba(16, 38, 84, 0.5);
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-sapphire;
+    }
+
+    &:focus,
+    &:active {
+      color: $color-sapphire;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #d10a42;
+      }
+    }
+  }
+
+  .no-js__trainers-wrapper {
+    overflow-x: auto;
+    display: flex;
+    column-gap: 40px;
+
+    @include vp-1199 {
+      column-gap: 30px;
+    }
+  }
+
+  .no-js__slide {
+    max-width: 260px;
+    min-width: 220px;
+    width: 22.4%;
+
+    @include vp-1199 {
+      min-width: 268px;
+      max-width: 483px;
+      width: 47.92%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      max-width: 425px;
+      min-width: 226px;
+    }
+  }
+
+  .no-js__slide--first {
+    @include vp-1199 {
+      order: -2;
+    }
+  }
+
+  .no-js__slide--second {
+    @include vp-1199 {
+      order: -1;
+    }
+  }
+
+  .no-js__trainers-button {
+    display: none;
+  }
+
+  .no-js__carousel {
+    overflow-x: auto;
+  }
+
+  .no-js__carousel-wpapper {
+    display: flex;
+  }
+
+  .no-js__carousel-slide {
+    margin-right: 20px;
+  }
+
+  .no-js__reviews-button {
+    display: none;
   }
 }

@@ -12,7 +12,7 @@
   }
 
   @include vp-767 {
-    padding: 50px 0 52px;
+    padding: 50px 0 42px;
     font-size: 16px;
     line-height: 19px;
   }
@@ -24,7 +24,7 @@
   align-items: flex-start;
 
   @include vp-1199 {
-    padding: 0 39px 0 41px;
+    padding: 0 39px 0 45px;
   }
 
   @include vp-767 {
@@ -74,6 +74,7 @@
 
 .page-footer__list a {
   padding: 4px 0;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -86,16 +87,14 @@
 }
 
 .page-footer__logo {
-  display: block;
   margin: 3px 60px 0 0;
 
   @include vp-1199 {
-    margin: 3px 47px 0 0;
-    width: 89px;
-    height: 18px;
+    margin: 3px 49px 0 0;
   }
 
   @include vp-767 {
+    display: block;
     margin: 0 0 23px;
     width: 68px;
     height: 15px;
@@ -104,8 +103,8 @@
 
 .page-footer__logo-icon {
   @include vp-1199 {
-    width: 89px;
-    height: 18px;
+    width: 82px;
+    height: 19px;
   }
 
   @include vp-767 {

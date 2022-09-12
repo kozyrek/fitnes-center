@@ -6,7 +6,7 @@ const TABLET_WIDTH = 768;
 
 const slider = new window.Swiper(sliderTrainers, {
   breakpoints: {
-    1200: {
+    1199: {
       slidesPerView: 4,
       spaceBetween: 40,
       initialSlide: 0,
@@ -27,24 +27,23 @@ const slider = new window.Swiper(sliderTrainers, {
     nextEl: buttonNext,
     prevEl: buttonPrev,
   },
-  watchOverflow: true, // ///////////////////////////////////////////////
+  watchOverflow: true,
 });
 
 const changeDirection = (item) => {
   if (window.screen.width >= DESKTOP_WIDTH) {
     item.activeIndex = 4;
-    window.console.log(item.activeIndex);
-  } else if (window.screen.width < DESKTOP_WIDTH && window.screen.width >= TABLET_WIDTH) {
+  } else if (window.screen.width < DESKTOP_WIDTH && window.screen.width >= (TABLET_WIDTH - 1)) {
     item.activeIndex = 4;
-    window.console.log(item.activeIndex);
-  } else if (window.screen.width < TABLET_WIDTH) {
+  } else if (window.screen.width < (TABLET_WIDTH - 1)) {
     item.activeIndex = 3;
-    window.console.log(item.activeIndex);
   }
 };
 
 window.addEventListener('resize', () => {
-  changeDirection(slider);
+  if (slider) {
+    changeDirection(slider);
+  }
 });
 
 const initSlider = () => {

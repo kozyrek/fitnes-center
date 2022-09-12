@@ -11,10 +11,11 @@
     <link rel="preload" href="fonts/roboto-condensed-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/bebas-neue-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/bebas-neue-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/rouble.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body class="page-body">
+  <body class="page-body no-js">
     <header class="page-header">
       <div class="wrapper">
         <div class="page-header__navigation">
@@ -40,12 +41,11 @@
               <li>Групповые занятия</li>
               <li>Кардио-зона</li>
             </ul>
-            <a class="page-header__button button" href="#">Купить абонемент</a>
+            <a class="page-header__button button" href="#subscriptions">Купить абонемент</a>
           </div>
 
           <div class="page-header__image">
             <picture>
-              <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/main-screen-mobile@1x.webp 1x, img/main-screen-mobile@2x.webp 2x"> -->
               <source type="image/webp" media="(max-width: 1199px)" srcset="img/main-screen-tablet@1x.webp 1x, img/main-screen-tablet@2x.webp 2x">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-screen-desktop@1x.webp 1x, img/main-screen-desktop@2x.webp 2x">
 
@@ -73,7 +73,7 @@
       <section class="gym wrapper">
         <div class="gym__description">
           <h2>Тренажерный зал</h2>
-          <p><strong>Просторный зал площадью 900 кв/м</strong></p>
+          <p><strong>Просторный зал площадью 900&nbsp;кв/м</strong></p>
           <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для&nbsp;укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для&nbsp;всех спортсменов.
             <span>В&nbsp;зале расположены отдельная зона для&nbsp;Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для&nbsp;различных видов групповых занятий.</span>
           </p>
@@ -92,7 +92,7 @@
           </div>
 
           <div class="gym__video video">
-            <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+            <a class="video__link no-js__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.webp 1x, img/gym-video-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.webp 1x, img/gym-video-tablet@2x.webp 2x">
@@ -101,17 +101,27 @@
                 <!-- 1x: 364px; 2x: 728px -->
                 <img class="video__media" src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg" width="364" height="228" alt="Фотография спортивного зала.">
               </picture>
-            </a>
-            <button class="video__button" type="button" aria-label="Запустить видео">
-              <svg class="video__button-icon" role="img" aria-hidden="true" focusable="false" width="17" height="17">
+
+              <svg class="video__link-icon" role="img" aria-hidden="true" focusable="false" width="17" height="17">
                 <use href="img/sprite_auto.svg#polygon-icon"></use>
               </svg>
-            </button>
+
+              <svg class="video__link-icon-ellipse" role="img" aria-hidden="true" focusable="false" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear_1_156)" stroke-opacity="0.2" stroke-width="2"/>
+                <defs>
+                  <linearGradient id="paint0_linear_1_156" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#ED0233"/>
+                    <stop offset="1" stop-color="#003EB7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </a>
+            <button class="video__button no-js__video-button" type="button" aria-label="Запустить видео"></button>
           </div>
         </div>
       </section>
 
-      <section class="subscriptions">
+      <section id="subscriptions" class="subscriptions">
         <div class="subscriptions__tabs tabs wrapper">
           <div class="tabs__image">
             <picture>
@@ -126,13 +136,13 @@
           <h2>Абонементы</h2>
 
           <div class="tabs__navigation">
-            <button class="tabs__button tabs__button--active" data-tab-name="tabs__pane--one">1 месяц</button>
-            <button class="tabs__button" data-tab-name="tabs__pane--two">6 месяцев</button>
-            <button class="tabs__button" data-tab-name="tabs__pane--three">12 месяцев</button>
+            <a href="#one-month" class="tabs__button tabs__button--active no-js__tabs-button" data-tab-name="tabs__pane--one" tabindex="0">1 месяц</a>
+            <a href="#six-month" class="tabs__button no-js__tabs-button" data-tab-name="tabs__pane--two" tabindex="0">6 месяцев</a>
+            <a href="#year" class="tabs__button no-js__tabs-button" data-tab-name="tabs__pane--three" tabindex="0">12 месяцев</a>
           </div>
 
-          <div class="tabs__content">
-            <div class="tabs__pane tabs__pane--one tabs__pane--show">
+          <div class="tabs__content no-js__tabs">
+            <div id="one-month" class="tabs__pane tabs__pane--one tabs__pane--show no-js__tab">
               <ul class="tabs__list list-reset">
                 <li class="tabs__item">
                   <h3>С тренером</h3>
@@ -141,7 +151,7 @@
                     <span data-parent="5000">5000</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Дневной</h3>
@@ -150,7 +160,7 @@
                     <span data-parent="1700">1700</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Полный день</h3>
@@ -159,12 +169,12 @@
                     <span data-parent="2700">2700</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </div>
 
-            <div class="tabs__pane tabs__pane--two">
+            <div id="six-month" class="tabs__pane tabs__pane--two no-js__tab">
               <ul class="tabs__list list-reset">
                 <li class="tabs__item">
                   <h3>С тренером</h3>
@@ -173,7 +183,7 @@
                     <span data-parent="25500">25500</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Дневной</h3>
@@ -182,7 +192,7 @@
                     <span data-parent="8700">8700</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Полный день</h3>
@@ -191,12 +201,12 @@
                     <span data-parent="13700">13700</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </div>
 
-            <div class="tabs__pane tabs__pane--three">
+            <div id="year" class="tabs__pane tabs__pane--three no-js__tab">
               <ul class="tabs__list list-reset">
                 <li class="tabs__item">
                   <h3>С тренером</h3>
@@ -205,7 +215,7 @@
                     <span data-parent="48000">48000</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Дневной</h3>
@@ -214,7 +224,7 @@
                     <span data-parent="16300">16300</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="tabs__item">
                   <h3>Полный день</h3>
@@ -223,7 +233,7 @@
                     <span data-parent="25900">25900</span>
                     <span>i</span>
                   </p>
-                  <a class="button" href="#">Купить абонемент</a>
+                  <a class="tabs__panel-button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </div>
@@ -243,7 +253,7 @@
                 <dd>12:00</dd>
               </dl>
             </div>
-            <p>Ежегодные соревнования по CrossFit</p>
+            <p>Ежегодные соревнования по&nbsp;CrossFit</p>
             <a class="button button--games" href="#">Заполнить заявку</a>
           </div>
         </div>
@@ -264,10 +274,10 @@
         <h2>Тренеры</h2>
         <div class="trainers__box">
           <div class="swiper trainers__slider">
-            <div class="swiper-wrapper trainers__slider-wrapper">
+            <div class="swiper-wrapper trainers__slider-wrapper no-js__trainers-wrapper">
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/pavlova-mobile@1x.webp 1x, img/photo/pavlova-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/pavlova-tablet@1x.webp 1x, img/photo/pavlova-tablet@2x.webp 2x">
@@ -282,15 +292,15 @@
                   <h3>Анна Павлова</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 5 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 5&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/lavrov-mobile@1x.webp 1x, img/photo/lavrov-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/lavrov-tablet@1x.webp 1x, img/photo/lavrov-tablet@2x.webp 2x">
@@ -305,15 +315,15 @@
                   <h3>Алексей Лавров</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 7 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 7&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide no-js__slide--first">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/pashkov-mobile@1x.webp 1x, img/photo/pashkov-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/pashkov-tablet@1x.webp 1x, img/photo/pashkov-tablet@2x.webp 2x">
@@ -328,15 +338,15 @@
                   <h3>Александр Пашков</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 6 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 6&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide no-js__slide--second">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/ketova-mobile@1x.webp 1x, img/photo/ketova-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/ketova-tablet@1x.webp 1x, img/photo/ketova-tablet@2x.webp 2x">
@@ -351,15 +361,15 @@
                   <h3>Мария Кетова</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 5 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 5&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/ketova-mobile@1x.webp 1x, img/photo/ketova-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/ketova-tablet@1x.webp 1x, img/photo/ketova-tablet@2x.webp 2x">
@@ -374,15 +384,15 @@
                   <h3>Наталья Иванова</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 5 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 5&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/pashkov-mobile@1x.webp 1x, img/photo/pashkov-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/pashkov-tablet@1x.webp 1x, img/photo/pashkov-tablet@2x.webp 2x">
@@ -397,15 +407,15 @@
                   <h3>Петр Петров</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 6 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 6&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/pavlova-mobile@1x.webp 1x, img/photo/pavlova-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/pavlova-tablet@1x.webp 1x, img/photo/pavlova-tablet@2x.webp 2x">
@@ -420,15 +430,15 @@
                   <h3>Ольга Сидорова</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 5 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 5&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="swiper-slide trainers__slide">
-                <div class="trainers__container">
+              <div class="swiper-slide trainers__slide no-js__slide">
+                <div class="trainers__container no-js__trainers-container">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/photo/lavrov-mobile@1x.webp 1x, img/photo/lavrov-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="img/photo/lavrov-tablet@1x.webp 1x, img/photo/lavrov-tablet@2x.webp 2x">
@@ -443,17 +453,17 @@
                   <h3>Олег Павлов</h3>
                   <p>CrossFit</p>
                   <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit</li>
-                    <li>Опыт — 7 лет</li>
+                    <li>Certified Level&nbsp;3 Trainer</li>
+                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                    <li>Опыт — 7&nbsp;лет</li>
                   </ul>
                 </div>
               </div>
 
             </div>
           </div>
-          <div class="swiper-button-prev trainers__button-prev"></div>
-          <div class="swiper-button-next trainers__button-next"></div>
+          <div class="swiper-button-prev trainers__button-prev no-js__trainers-button"></div>
+          <div class="swiper-button-next trainers__button-next no-js__trainers-button"></div>
         </div>
       </section>
 
@@ -475,7 +485,8 @@
             <li class="advantage__item advantage__item--trainer">
               <h3>
                 <span>100</span>
-                Тренажеров</h3>
+                Тренажеров
+              </h3>
               <p>Современные тренажеры на&nbsp;все группы мышц</p>
             </li>
 
@@ -525,9 +536,9 @@
                 <span>4999</span>
               </h3>
               <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
-              <a href="">Подробнее</a>
-
+              <a href="#">Подробнее</a>
             </div>
+
             <div class="promo__image">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/promotion-mobile@1x.webp 1x, img/promotion-mobile@2x.webp 2x">
@@ -543,13 +554,13 @@
           <li class="promo__item">
             <h3>Месяц бесплатно</h3>
             <p>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</p>
-            <a href="">Подробнее</a>
+            <a href="#">Подробнее</a>
           </li>
 
           <li class="promo__item">
-            <h3>Скидка 20%</h3>
+            <h3>Скидка&nbsp;20%</h3>
             <p>Корпоративный фитнес&nbsp; с&nbsp;командой</p>
-            <a href="">Подробнее</a>
+            <a href="#">Подробнее</a>
           </li>
         </ul>
       </section>
@@ -557,9 +568,9 @@
       <section class="reviews wrapper">
         <h2>Отзывы</h2>
         <div class="reviews__box">
-          <div class="swiper reviews__carousel">
-            <div class="swiper-wrapper reviews__carousel-wpapper">
-              <div class="swiper-slide reviews__carousel-slide">
+          <div class="swiper reviews__carousel no-js__carousel">
+            <div class="swiper-wrapper reviews__carousel-wpapper no-js__carousel-wpapper">
+              <div class="swiper-slide reviews__carousel-slide no-js__carousel-slide">
                 <div class="reviews__wpapper">
                   <div class="reviews__image">
                     <picture>
@@ -576,7 +587,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide reviews__carousel-slide">
+              <div class="swiper-slide reviews__carousel-slide no-js__carousel-slide">
                 <div class="reviews__wpapper">
                   <div class="reviews__image">
                     <picture>
@@ -594,8 +605,8 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-prev reviews__button-prev"></div>
-          <div class="swiper-button-next reviews__button-next"></div>
+          <div class="swiper-button-prev reviews__button-prev no-js__reviews-button"></div>
+          <div class="swiper-button-next reviews__button-next no-js__reviews-button"></div>
         </div>
       </section>
 
@@ -610,7 +621,7 @@
                 <input id="name" type="text" name="name" placeholder="Имя" required>
 
                 <label class="visually-hidden" for="phone-number">Номер телефона</label>
-                <input id="phone-number" type="tel" data-tel-input name="phone-number" placeholder="Телефон" minlength="14" maxlength="14" pattern="^(\+7|7|8)\(9\d{2}\)\d{7}$" title="+7(9XX)XXXXXXX" required>
+                <input id="phone-number" type="tel" name="phone-number" placeholder="Телефон" pattern="^[\d\s()+-]*$" title="Номер может содержать цифры, символы (), +, -" required>
 
                 <button class="button" type="submit">Отправить</button>
               </form>
@@ -623,9 +634,9 @@
 
               <dl>
                 <dt>Адрес:</dt>
-                <dd>г. Омск, ул. 60 лет Октября, 7</dd>
+                <dd>г.&nbsp;Омск, ул.&nbsp;60&nbsp;лет&nbsp;Октября, 7</dd>
                 <dt>График работы:</dt>
-                <dd>Пн-Вс: с 8:00 до 22:00</dd>
+                <dd>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</dd>
               </dl>
 
               <dl>

@@ -1,5 +1,5 @@
-// import {iosVhFix} from './utils/ios-vh-fix';
-
+import {removeClassNoJs} from './modules/on-js';
+import {setStorage} from './modules/set-storage';
 import {findVideos} from './modules/play-video';
 import {openTab} from './modules/open-tab';
 import './modules/init-slider';
@@ -9,19 +9,16 @@ import './modules/init-carousel';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
-  // iosVhFix();
-  findVideos();
-
   // Modules
   // ---------------------------------
+
+  removeClassNoJs();
+  setStorage();
+  findVideos();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-  //   findVideos();
     openTab();
   });
 });
