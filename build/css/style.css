@@ -1080,7 +1080,7 @@ a {
   flex-direction: column;
   -webkit-box-align: end;
   -ms-flex-align: end;
-  align-items: end;
+  align-items: flex-end;
   min-width: 380px;
 }
 
@@ -1118,7 +1118,6 @@ a {
 }
 
 .page-header__button {
-  margin-top: auto;
   padding: 21px 24px 18px;
   width: 234px;
 }
@@ -1372,14 +1371,10 @@ a {
 .tabs__navigation {
   position: relative;
   margin-bottom: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 46px;
 }
 
@@ -1975,6 +1970,7 @@ a {
 }
 
 .advantage__item--trainer p {
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
@@ -2168,9 +2164,6 @@ a {
 .reviews__carousel {
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-}
-
-.reviews__carousel-wpapper {
   background-color: #1c3374;
 }
 
@@ -2408,6 +2401,7 @@ a {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #74819c;
+  border-radius: 0;
 }
 
 .communication__free-training input:hover {
@@ -3669,19 +3663,17 @@ a {
 
   .communication__free-training form {
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 180px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .communication__free-training input {
     margin-bottom: 3px;
     padding: 5px 0 6px;
+  }
+
+  .communication__free-training button {
+    margin-top: 7px;
   }
 
   .page-footer {

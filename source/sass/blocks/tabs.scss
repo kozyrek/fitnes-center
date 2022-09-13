@@ -65,9 +65,8 @@
 .tabs__navigation {
   position: relative;
   margin-bottom: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 46px;
 
   @include vp-1199 {

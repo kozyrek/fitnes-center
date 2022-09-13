@@ -1,7 +1,7 @@
 const videos = document.querySelectorAll('.video');
 const link = document.querySelector('.video__link');
 const button = document.querySelector('.video__button');
-const images = document.querySelectorAll('svg');
+const images = document.querySelectorAll('.video svg');
 
 const findVideos = () => {
   if (videos) {
