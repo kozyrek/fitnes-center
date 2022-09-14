@@ -5,6 +5,9 @@ const buttonNext = document.querySelector('.swiper-button-next.trainers__button-
 // const TABLET_WIDTH = 768;
 
 const slider = new window.Swiper(sliderTrainers, {
+  slidesPerView: 4,
+  spaceBetween: 40,
+  initialSlide: 0,
   breakpoints: {
     1199: {
       slidesPerView: 4,
@@ -52,7 +55,7 @@ const initSlider = () => {
 
 export {initSlider};
 
-// spaceBetween: 0,
+// spaceBetween: 0,////
 //   slidesPerView: 1,
 // direction: 'horizontal',
 // simulateTouch: true,
