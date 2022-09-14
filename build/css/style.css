@@ -1493,6 +1493,9 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 0 35px;
   position: relative;
   z-index: 1;
@@ -1527,6 +1530,7 @@ a {
   font-weight: 700;
   color: #102654;
   margin-left: 10px;
+  padding: 0 0 15px;
 }
 
 .tabs span + span::before {
@@ -3369,6 +3373,7 @@ a {
     font-size: 45px;
     line-height: 60px;
     margin-left: 6px;
+    padding: 0 0 12px;
   }
 
   .tabs__item > span {
