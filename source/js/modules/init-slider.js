@@ -22,7 +22,7 @@ const slider = new window.Swiper(sliderTrainers, {
       initialSlide: 2,
     },
   },
-  loop: true, // ////////////////////////////
+  // loop: true, // //////////////////////////////
   navigation: {
     nextEl: buttonNext,
     prevEl: buttonPrev,
