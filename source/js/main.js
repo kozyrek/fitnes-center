@@ -4,6 +4,7 @@ import {findVideos} from './modules/play-video';
 import {openTab} from './modules/open-tab';
 import './modules/init-slider';
 import './modules/init-carousel';
+import {initSlider} from './modules/init-slider';
 
 // ---------------------------------
 
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   removeClassNoJs();
   setStorage();
   findVideos();
+  initSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
