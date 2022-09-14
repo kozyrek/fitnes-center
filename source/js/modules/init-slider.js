@@ -22,12 +22,12 @@ const slider = new window.Swiper(sliderTrainers, {
       initialSlide: 2,
     },
   },
-  loop: true,
+  loop: true, // ////////////////////////////
   navigation: {
     nextEl: buttonNext,
     prevEl: buttonPrev,
   },
-  watchOverflow: true,
+  // watchOverflow: true, // ///////////////////////
 });
 
 const changeDirection = (item) => {
@@ -51,3 +51,14 @@ const initSlider = () => {
 };
 
 export {initSlider};
+
+// spaceBetween: 0,
+//   slidesPerView: 1,
+// direction: 'horizontal',
+// simulateTouch: true,
+// grabCursor: true,
+// slideToClickedSlide: true,
+// keyboard: {
+//   enabled: true,
+//   onlyInViewport: true,
+//   pageUpDown: true
