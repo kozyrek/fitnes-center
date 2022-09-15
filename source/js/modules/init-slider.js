@@ -4,7 +4,7 @@ const buttonNext = document.querySelector('.swiper-button-next.trainers__button-
 const DESKTOP_WIDTH = 1200;
 const TABLET_WIDTH = 768;
 
-const slider = new window.Swiper(sliderTrainers, {
+export const slider = new window.Swiper(sliderTrainers, {
   loop: true,
   spaceBetween: 0,
   slidesPerView: 1,
@@ -50,8 +50,8 @@ window.addEventListener('resize', () => {
   }
 });
 
-const initSlider = () => {
-  return slider;
-};
+// const initSlider = () => {
+//   return slider;
+// };
 
-export {initSlider};
+// export {initSlider};
